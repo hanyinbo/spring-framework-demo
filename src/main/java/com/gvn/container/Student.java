@@ -1,6 +1,8 @@
 package com.gvn.container;
 
-public class Student {
+import org.springframework.beans.factory.BeanNameAware;
+
+public class Student implements BeanNameAware {
     private String name = "hanyinbo";
 
     public String getName() {
@@ -9,5 +11,9 @@ public class Student {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public void setBeanName(String s) {
+        System.out.println("beanName:"+s);
     }
 }
